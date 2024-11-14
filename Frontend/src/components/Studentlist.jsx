@@ -16,7 +16,7 @@ const Studentlist = () => {
 
   const fetchStudents = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/api/students");
+      const response = await axios.get("https://crudmvc-dgiv.onrender.com/api/students");
       setStudents(response.data);
     } catch (error) {
       console.error("Error fetching students:", error);
@@ -27,9 +27,9 @@ const Studentlist = () => {
     e.preventDefault();
     try {
       if (editingId) {
-        await axios.put(`http://localhost:5000/api/students/${editingId}`, formData);
+        await axios.put(`https://crudmvc-dgiv.onrender.com/api/students/${editingId}`, formData);
       } else {
-        await axios.post("http://localhost:5000/api/students", formData);
+        await axios.post("https://crudmvc-dgiv.onrender.com/api/students", formData);
       }
       fetchStudents();
       setFormData({
@@ -54,7 +54,7 @@ const Studentlist = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/api/students/${id}`);
+      await axios.delete(`https://crudmvc-dgiv.onrender.com/api/students/${id}`);
       fetchStudents();
     } catch (error) {
       console.error("Error deleting student:", error);

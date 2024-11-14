@@ -16,7 +16,7 @@ const Facultylist = () => {
 
   const fetchFaculty = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/api/faculty");
+      const response = await axios.get("https://crudmvc-dgiv.onrender.com/api/faculty");
       setFaculty(response.data);
     } catch (error) {
       console.error("Error fetching faculty:", error);
@@ -27,9 +27,9 @@ const Facultylist = () => {
     e.preventDefault();
     try {
       if (editingId) {
-        await axios.put(`http://localhost:5000/api/faculty/${editingId}`, formData);
+        await axios.put(`https://crudmvc-dgiv.onrender.com/api/faculty/${editingId}`, formData);
       } else {
-        await axios.post("http://localhost:5000/api/faculty", formData);
+        await axios.post("https://crudmvc-dgiv.onrender.com/api/faculty", formData);
       }
       fetchFaculty();
       setFormData({
@@ -54,7 +54,7 @@ const Facultylist = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/api/faculty/${id}`);
+      await axios.delete(`https://crudmvc-dgiv.onrender.com/api/faculty/${id}`);
       fetchFaculty();
     } catch (error) {
       console.error("Error deleting faculty:", error);

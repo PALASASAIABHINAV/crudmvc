@@ -25,7 +25,7 @@ const BulkUpload = () => {
     try {
       setUploadStatus("Uploading...");
       const response = await axios.post(
-        "http://localhost:5000/api/students/bulk-upload",
+        "https://crudmvc-dgiv.onrender.com/api/students/bulk-upload",
         formData,
         {
           headers: {

@@ -83,13 +83,13 @@ const Contact = () => {
           <h2 className="text-xl font-semibold mb-4">Other Ways to Reach Us</h2>
           <div className="space-y-3">
             <p className="flex items-center text-gray-600">
-              <span className="font-medium mr-2">Email:</span> psaiabhinav1724@gmail.com
+              <span className="font-medium mr-2">Email:</span> support@campusmanager.com
             </p>
             <p className="flex items-center text-gray-600">
-              <span className="font-medium mr-2">Phone:</span> +91 9502551724
+              <span className="font-medium mr-2">Phone:</span> +1 (555) 123-4567
             </p>
             <p className="flex items-center text-gray-600">
-              <span className="font-medium mr-2">Address:</span> KL UNIVERSITY, VIJAYWADA, 522502.
+              <span className="font-medium mr-2">Address:</span> 123 Education Street, Learning City, ED 12345
             </p>
           </div>
         </div>

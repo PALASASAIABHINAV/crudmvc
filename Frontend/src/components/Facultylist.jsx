@@ -16,7 +16,7 @@ const Facultylist = () => {
 
   const fetchFaculty = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/api/faculty");
+      const response = await axios.get("https://crudmvc-dgiv.onrender.com/api/faculty");
       setFaculty(response.data);
     } catch (error) {
       console.error("Error fetching faculty:", error);

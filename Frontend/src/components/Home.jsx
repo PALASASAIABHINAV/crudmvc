@@ -12,8 +12,8 @@ const Home = () => {
     const fetchCounts = async () => {
       try {
         const [studentsRes, facultyRes] = await Promise.all([
-          axios.get('http://localhost:5000/api/students'),
-          axios.get('http://localhost:5000/api/faculty')
+          axios.get('https://crudmvc-dgiv.onrender.com/api/students'),
+          axios.get('https://crudmvc-dgiv.onrender.com/api/faculty')
         ]);
         setCounts({
           students: studentsRes.data.length,
